@@ -1,0 +1,6 @@
+@import url(chrome://global/skin/);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+richlistitem > textbox:first-child { margin-left: 2em; }
+richlistbox { min-height: 2em; max-height: 25em; background-color: -moz-dialog; border: ThreeDShadow 3px solid; }
+colorpicker[type="button"] { -moz-binding: url("chrome://foxlinks/content/colorpicker/colorpicker.xml#colorpicker-button"); }

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://foxlinks/content/foxlinksOptions.css" type="text/css"?>
+<dialog buttons="accept, cancel" id="foxlinks-options-dialog" ondialogaccept="foxlinksSaveOps()" onload="foxlinksInitOps()" title="FOXlinks Settings" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" persist="screenX screenY width height sizemode">
+	<script type="application/x-javascript" src="chrome://foxlinks/content/foxlinksGlobals.js"/>
+	<script type="application/x-javascript" src="chrome://foxlinks/content/foxlinksOptions.js"/>
+	<popupset id="foxlinksOptionsPopups">
+		<popup id="foxlinksContext">
+			<menuitem id="foxlinksContextDelete" label="Delete Selected User" oncommand="foxlinksDeleteSelected()"/>
+			<menuitem id="foxlinksContextDeleteAll" label="Delete All Users" oncommand="if (FOXLINKS_PROMPTSERVICE.confirm(window, &quot;FOXlinks Warning&quot;, &quot;Are you sure you want to delete ALL of the users from this list?&quot;)) { foxlinksDeleteAll(); }"/>
+			<menuitem id="foxlinksContextNew" label="Add A New User" oncommand="foxlinksAddNewUser()"/>
+			<menu id="foxlinksContextCopy" label="Copy Selection">
+				<menupopup>
+					<menuitem id="foxlinksContextCopyOne" label="1" oncommand="foxlinksCopyUser(1)"/>
+					<menuitem id="foxlinksContextCopyTwo" label="2" oncommand="foxlinksCopyUser(2)"/>
+					<menuitem id="foxlinksContextCopyThree" label="3" oncommand="foxlinksCopyUser(3)"/>
+					<menuitem id="foxlinksContextCopyFour" label="4" oncommand="foxlinksCopyUser(4)"/>
+					<menuitem id="foxlinksContextCopyFive" label="5" oncommand="foxlinksCopyUser(5)"/>
+					<menuitem id="foxlinksContextCopyMore" label="More..." oncommand="foxlinksCopyUser()"/>
+				</menupopup>
+			</menu>
+		</popup>
+	</popupset>
+	<tabbox>
+		<tabs>
+			<tab label="Main"/>
+			<!--<tab label="Quoting"/>-->
+			<tab label="Highlighting"/>
+			<tab label="Theme"/>
+		</tabs>
+		<tabpanels>
+			<tabpanel orient="vertical">
+				<hbox>
+					<vbox>
+						<checkbox id="foxlinksQuickPost" label="Expand QuickPost at the bottom of the page"/>
+						<checkbox id="foxlinksPageJump" label="Enable Page Jump links on the topic list"/>
+						<checkbox id="foxlinksDancinJesus" label="Enable the &quot;Admin&quot; button for Tag Buttons"/>
+						<checkbox id="foxlinksAdvancedSearch" label="Direct &quot;Search&quot; link to Advanced Search Page"/>
+						<checkbox id="foxlinksSwitchButtonPositions" label="Show Post button before Preview button on QuickPost"/>
+						<checkbox id="foxlinksBatchUploader" label="Enable (experimental) batch image uploader"/>
+						<checkbox id="foxlinksQuoteMsg" label="Double-click post body to QuickQuote post"/>
+						<checkbox id="foxlinksHighlightQuotes" label="Use user highlighting on quotes"/>
+						<checkbox id="foxlinksLivierlinks" label="Scroll through topics automatically (togglable per topic)"/>
+						<checkbox id="foxlinksNotificationsQuoted" label="Show Notifications when somebody quotes you"/>
+					</vbox>
+					<spacer flex="1"/>
+					<vbox>
+						<checkbox id="foxlinksSpecialLinks" label="Display &quot;special&quot; links on pages"/>
+						<checkbox id="foxlinksPostButtons" label="Enable Tag Buttons on post forms"/>
+						<checkbox id="foxlinksMessageNumbering" label="Enable message numbering"/>
+						<checkbox id="foxlinksInlineImageExpansion" label="Enable inline expansion of uploaded images"/>
+						<checkbox id="foxlinksSortByTopicsLastPost" label="Sort message history by last topic post by default"/>
+						<checkbox id="foxlinksQuoteMsgTop" label="Double-click post header to QuickQuote post"/>
+						<checkbox id="foxlinksJumpToQuote" label="Add link in quotes to jump to quoted post"/>
+						<checkbox id="foxlinksAwesomeQuotes" label="Use a different sytle for quotes"/>
+						<checkbox id="foxlinksNotificationsHighlighted" label="Show Notifications when an highlighted user posts"/>
+					</vbox>
+				</hbox>
+				<groupbox tooltiptext="An optional search box to appear in the upper right hand corner of every page">
+					<caption label="Search Box"/>
+					<radiogroup id="foxlinksSearchBox" orient="horizontal">
+						<radio value="0" label="None"/>
+						<radio value="1" label="Link Me!"/>
+						<radio value="2" label="Search Links"/>
+						<radio value="3" label="Search LUEpedia"/>
+						<radio value="4" label="Search LUE Board"/>
+					</radiogroup>
+				</groupbox>
+				<!--<groupbox>
+					<caption label="QuickPost Sig"/>
+					<label control="foxlinksSig" value="Your LUElinks signature"/>
+					<textbox id="foxlinksSig" rows="3" multiline="true" flex="1"/>
+				</groupbox>-->
+			</tabpanel>
+			<tabpanel orient="vertical">
+				<description>
+Right click on the left side of the box below to bring up the context menu
+				</description>
+				<hbox>
+					<button label="Add new user" oncommand="foxlinksAddNewUser()"/>
+					<spacer flex="1"/>
+				</hbox>
+				<richlistbox id="foxlinksHighlightTree" context="foxlinksContext"/>
+			</tabpanel>
+			<tabpanel orient="vertical">
+				<groupbox>
+					<caption label="Stylesheets"/>
+					<description>
+This allows you to use your own CSS instead of LUELinks&apos; premade ones. To
+import a URL, use &quot; @import url(http://url.com/file.css); &quot; without
+double quotes. To link to a stylesheet on your computer use &quot; @import
+url(file:///c:/file.css); &quot; without double quotes. You may also simply
+copy and paste the CSS into the textbox.
+					</description>
+					<spacer style="height: 10px"/>
+					<label control="foxlinksStylesheetLink" value="Insert CSS"/>
+					<textbox id="foxlinksStylesheetLink" rows="10" multiline="true" flex="1"/>
+					<checkbox id="foxlinksDisableMainStyle" label="Disable LUElinks' main style sheet"/>
+				</groupbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</dialog>

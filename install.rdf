@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{3ba8ae12-85ee-4cd9-9c00-9bec81ee0c1c}</em:id>
+    <em:name>FOXlinks</em:name>
+    <em:version>3.1</em:version>
+    <em:description>Improves browsing of a site that doesn't exist.</em:description>
+    <em:creator>Toad King</em:creator>
+    <em:updateURL>http://www.toadking.com/update.rdf</em:updateURL>
+    <em:iconURL>chrome://foxlinks/content/foxlinksIcon.png</em:iconURL>
+    <em:optionsURL>chrome://foxlinks/content/options.xul</em:optionsURL>
+    <em:contributor>bttfpromo (AKA: allalone05)</em:contributor>
+    <em:contributor>All the LLers who pointed out errors/made suggestions/gave me locations of secret boards</em:contributor>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDc63KC0PFgyEiADEAWnjq2rzTjS3tD+IBPWf1NmF5Y359M7fTk9fxIvozPXt+fiq/UOvo1+vTNsXUg54zO2RDQz/fPJ9BIKRydYn3FfYEWTu3PuNugIrOmuA3wSJYIZYqC3mQDAC2eJkZS6xiGedshzPd3iJg3prnHy1OJY/QTlQIDAQAB</em:updateKey>
+    <em:multiprocessCompatible>true</em:multiprocessCompatible>
+    <em:targetApplication>
+	  <Description>
+	    <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+	    <em:minVersion>1.5</em:minVersion>
+	    <em:maxVersion>35.*</em:maxVersion>
+	  </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

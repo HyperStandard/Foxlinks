@@ -1,0 +1,202 @@
+@-moz-document url-prefix(http://endoftheinter.net/), url-prefix(https://endoftheinter.net/),
+               url-prefix(http://www.endoftheinter.net/), url-prefix(https://www.endoftheinter.net/),
+               url-prefix(http://archives.endoftheinter.net/), url-prefix(https://archives.endoftheinter.net/),
+               url-prefix(http://boards.endoftheinter.net/), url-prefix(https://boards.endoftheinter.net/),
+               url-prefix(http://links.endoftheinter.net/), url-prefix(https://links.endoftheinter.net/),
+               url-prefix(http://images.endoftheinter.net/), url-prefix(https://images.endoftheinter.net/),
+               url-prefix(http://clouds.endoftheinter.net/), url-prefix(https://clouds.endoftheinter.net/),
+               url-prefix(http://archives.clouds.endoftheinter.net/), url-prefix(https://archives.clouds.endoftheinter.net/),
+               url-prefix(http://boards.clouds.endoftheinter.net/), url-prefix(https://boards.clouds.endoftheinter.net/),
+               url-prefix(http://links.clouds.endoftheinter.net/), url-prefix(https://links.clouds.endoftheinter.net/),
+               url-prefix(http://images.clouds.endoftheinter.net/), url-prefix(https://images.clouds.endoftheinter.net/) {
+div.linkme {
+	padding: 1px;
+	position: absolute;
+	width: auto;
+}
+
+div.topicdiv {
+	overflow: hidden;
+}
+
+div#regular {
+	right: 12px;
+	top: 15px;
+}
+
+div#classic {
+	right: 2px;
+	top: 9px;
+}
+
+a.more {
+	text-indent: 1em;
+}
+
+ul.menu li {
+	list-style-type: none;
+	text-align: left;
+	width: auto;
+}
+
+ul.menu ul a,
+div.sdiv a {
+	display: block;
+	width: auto;
+}
+
+div.special {
+	background-color: transparent !important;
+	display: inline;
+	height: 20px;
+	left: 3px;
+	overflow: visible;
+	position: absolute;
+	text-indent: 4px;
+	top: 12px;
+	width: auto;
+}
+
+ul.menu > li > ul.blist > li,
+div.sdiv > ul.blist > li {
+	max-width: 460px;
+}
+
+ul.menu,
+ul.menu ul {
+	margin: 0;
+	width: auto !important;
+}
+
+td.jump ul.menu ul {
+	display: none;
+}
+
+td.jump ul.menu li> ul {
+	position: static;
+}
+
+li {
+	display: block;
+	width: auto;
+}
+
+ul.menu {
+	padding: 1px;
+}
+
+td.jump {
+	/*font-size: 10px !important;*/
+	width: 30px;
+}
+
+td.jump ul li {
+	width: 30px !important;
+}
+
+td.jump ul {
+	height: auto;
+	margin-top: 0 !important;
+	position: absolute;
+	width: 30px !important;
+}
+
+td.jump ul a {
+	display: block !important;
+	font-weight: bold;
+	width: 30px !important;
+}
+
+li > div {
+	padding: 2px;
+}
+
+li > div,
+div.info {
+	display: none;
+}
+
+li > a:hover + div,
+div.sdiv > a:hover + div {
+	background-color: gray !important;
+	color: white;
+	display: block;
+	float: right;
+	font-size: 9.5pt;
+	font-weight: normal;
+	left: 9px;
+	position: fixed;
+	top: 9px;
+	width: 251px !important;
+	text-indent: 0 !important;
+	z-index: 2147483647 !important;
+	border-radius: 0 !important;
+	opacity: 1 !important;
+}
+
+div.sdiv {
+	display: inline;
+	height: auto;
+	margin: auto;
+	max-width: 460px;
+	padding: 0;
+	width: auto;
+}
+
+div.special *,
+div.sdiv * {
+	border: 1px transparent solid;
+	max-width: 460px;
+	overflow: visible;
+	width: inherit;
+	border-radius: 0 0 20px 20px;
+}
+
+div.classicSpecial {
+	display: inline;
+}
+
+div.sdiv * {
+	border-radius: 0 20px 20px 0;
+}
+
+div.sdiv > ul.blist {
+	left: 0 !important;
+}
+
+div.messagetop[style] a,
+div.messagetop[style] a:link,
+div.messagetop[style] a:hover,
+div.messagetop[style] a:active,
+table.grid td[style] a,
+table.grid td[style] a:link,
+table.grid td[style] a:hover,
+table.grid td[style] a:active {
+	color: inherit !important;
+}
+
+div.imgs span.foxlinks-expanded {
+	height: auto !important;
+	width: auto !important;
+	line-height: normal !important;
+	min-height: 150px !important;
+	min-width: 160px !important;
+}
+
+a#foxlinks-livierlinks {
+	background: none repeat scroll 0 0 #DDE3EB;
+	border-color: #2E5A7F;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	top: 0;
+	display: block;
+	font-size: 9pt;
+	padding: 4px;
+	line-height: 1em;
+	position: fixed;
+	left: 0;
+	text-align: center;
+	text-decoration: none;
+	z-index: 9999;
+}
+}

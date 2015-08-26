@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://foxlinks/content/foxlinksMenu.css" style="text/css"?>
+<overlay id="foxlinksOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://foxlinks/content/foxlinksBootstrap.js"/>
+	<menupopup id="menu_ToolsPopup">
+		<menuitem insertafter="devToolsSeparator" label="FOXlinks Options" id="foxlinks-menu" class="menuitem_iconic" oncommand="window.openDialog('chrome://foxlinks/content/foxlinksOptions.xul','','centerscreen,chrome,dependant,resizable=yes')"/>
+	</menupopup>
+</overlay>
